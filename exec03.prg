@@ -7,7 +7,7 @@ procedure Main
 
   EXEC "InexistentProgram" TO aResult ERROR cError AS ARRAY
   IF .NOT. EMPTY( cError )
-      ? "Mensagem de erro:" , cError
+      ? "Error from external program:" , cError
       RETURN
   ENDIF  
 
