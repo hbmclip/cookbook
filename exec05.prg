@@ -1,13 +1,17 @@
 #include <hbmediator.ch>
 
 procedure Main
+   local cResult, cError, nErrorLevel
 
-  local cResult
+   EXEC "ls -l -a -h" To cResult error cError errorlevel nErrorLevel
 
-  EXEC "InexistentProgram" TO cResult 
-  ? "Result command: " , cResult
-  IF IsExecError()
-      ? ExecError()
-  ENDIF  
+   ? cResult
+   ? "ErrorLevel : " , nErrorLevel
+   ? "Error  : " , cError
+      
+
+
+return
+
 
 
