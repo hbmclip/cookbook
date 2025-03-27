@@ -6,7 +6,7 @@ procedure Main
 
 
   EXEC "InexistentProgram" ERRORLEVEL nErrorLevel 
-  ? nErrorLevel
+  
   IF nErrorLevel > 0
       ? "Errorlevel from external program:" , nErrorLevel
       RETURN
