@@ -2,12 +2,12 @@
 
 procedure Main
 
-  local aResult,cError,nErrorLevel
+  local aResult,nErrorLevel
 
 
-  EXEC "InexistentProgram" TO aResult ERROR cError ERRORLEVEL nErrorLevel AS ARRAY
-  IF .NOT. EMPTY( cError )
-      ? "Error from external program:" , cError
+  EXEC "InexistentProgram" TO aResult ERRORLEVEL nErrorLevel AS ARRAY
+  IF nErrorLevel > 0
+      ? "Errorlevel from external program:" , nErrorLevel
       RETURN
   ENDIF  
 
