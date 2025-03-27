@@ -2,8 +2,7 @@
 
 procedure Main
 
-  local cResult,nErrorLevel
-
+  local cResult
 
   EXEC "InexistentProgram" TO cResult 
   ? "Result command: " , cResult
