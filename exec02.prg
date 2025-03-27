@@ -11,7 +11,7 @@ procedure Main
 
 
    FOR x := 1 TO len( aResult )
-       ? aResult[x]
+       ? "Array line[" , x , "]" , " -> " , aResult[x]
    NEXT
 
 
