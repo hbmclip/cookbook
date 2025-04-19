@@ -6,8 +6,12 @@ procedure Main
 
    local cResult
 
-
-   EXEC "ls -l" to cResult
+#ifdef __PLATFORM__WINDOWS
+   LOCAL cExec := "dir *.*"
+#else
+   LOCAL cExec := "ls -l"
+#endif
+   EXEC cExec to cResult
    ? cResult
 
 
