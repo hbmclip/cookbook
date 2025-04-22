@@ -13,7 +13,4 @@ procedure MAIN
    EXEC cExec to cResult
    ? cResult
 
-? "..."
-
-
 return
