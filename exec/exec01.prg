@@ -1,7 +1,6 @@
 #include <hbmediator.ch>
 
-
-procedure Main
+procedure MAIN
 
 
    local cResult
